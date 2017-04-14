@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1492191307 source:c:\users\clad-\documents\console\console\main.cpp
+	"input.hpp"
+
+1492203381 c:\users\clad-\documents\console\console\input.hpp
+	<iostream>
+	<string>
+	<regex>
+	<vector>
+	"functiondictionary.hpp"
+
+1492191396 c:\users\clad-\documents\console\console\functiondictionary.hpp
+	<string>
+	<iostream>
+	<string>
+	<vector>
+
