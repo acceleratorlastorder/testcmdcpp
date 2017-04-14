@@ -7,7 +7,8 @@
 using namespace std;
 using std::string;
 
-int checkpatern(string x){
+int checkpatern(string x)
+{
 
     std::regex const pattern
     {
@@ -20,21 +21,17 @@ int checkpatern(string x){
 
         cout << "invalid command" << endl;
         return false;
-    }
+    };
     std::cout << std::boolalpha << result << std::endl;
     return true;
-}
+};
 
 
 int manageinput(string x)
 {
     cout << "here's the string we've got: " << x << endl;
+    //char lol = x;
 
-if(!checkpatern(x)){
-    cout << "merci d'entrer une commande valide" << endl;
-    return false;
-}
-else
     for(unsigned int i = 0; i<x.size(); i++)
     {
         cout << "iteration number : " << i << endl;
@@ -42,11 +39,26 @@ else
         if (x[i] == ',')
         {
             cout << ", detected" << endl;
+        };
+        if (x[i]=='\0')
+        {
+            cout << "end of the line lol " << endl;
         }
+    };
 
+
+
+
+
+    if(!checkpatern(x))
+    {
+        cout << "merci d'entrer une commande valide" << endl;
+        return false;
     }
-
+    else
+        cout << "lel" << endl;
     return true;
+
 };
 
 
