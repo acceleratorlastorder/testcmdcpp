@@ -1,7 +1,3 @@
-#include <iostream>
-#include <string>
-#include <regex>
-#include <vector>
 #include "functiondictionary.hpp"
 
 using namespace std;
@@ -10,21 +6,37 @@ using std::string;
 int checkpatern(string x)
 {
 
-    std::regex const pattern
+    for (unsigned int i=0; i < 4; i++)
     {
-        R"([pin]+\s+[0-9]*)"
-    };
-    std::string target { x };
-    bool result = std::regex_match(target, pattern);
-    if (!result)
-    {
+        string commandpattern{"(["+ dictionary[i] +"]+\s+[0-9]*)"};
 
-        cout << "invalid command" << endl;
-        return false;
+        cout << "in checkpatern function iteration number " << i << " checking if the command " << dictionary[i] << " exists " << endl;
+        std::regex const pattern
+        {
+            commandpattern
+        };
+        std::string target { x };
+        bool result = std::regex_match(target, pattern);
+    cout << "commandpatern: " << commandpattern << "result: " << result << "target :" << target << "pattern: " <<endl;
+
+       if (result)
+        {
+
+            cout << "command found, we found " << dictionary[i] << endl;
+            return false;
+        }
+        else{
+
+            cout << "not matching checking the next patern" << endl;
+        };
     };
-    std::cout << std::boolalpha << result << std::endl;
-    return true;
+
+
+
 };
+
+
+
 
 
 int manageinput(string x)
