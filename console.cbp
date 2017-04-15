@@ -32,6 +32,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="functiondictionary.hpp" />
+		<Unit filename="input.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

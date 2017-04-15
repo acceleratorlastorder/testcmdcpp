@@ -2,6 +2,7 @@
 #include <string>
 #include <regex>
 #include <vector>
+#include <algorithm>
 
 std::string dictionary[] =
 
